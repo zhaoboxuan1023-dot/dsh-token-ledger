@@ -1,0 +1,4 @@
+# Register the cross-channel token ledger.
+- insert:
+    - id: token-ledger
+      name: dsh-token-ledger

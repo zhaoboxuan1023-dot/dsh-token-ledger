@@ -1,0 +1,41 @@
+{
+  "name": "dsh-token-ledger",
+  "displayName": "DSH Token Ledger",
+  "description": "跨通道统一的 token 用量记账：不管 DeepSeek 账号、API Key、WorkBuddy 还是其他 provider，都按通道/模型/日期实时汇总。",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [],
+      "platform": "web"
+    }
+  },
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "token",
+    "usage",
+    "billing",
+    "metrics"
+  ],
+  "engines": {
+    "node": ">=22"
+  }
+}
